@@ -94,7 +94,7 @@ module.exports = function (hexo) {
         }
         $(tags.join(',')).each(function () {
             const level = tags.indexOf(this.name);
-            const id = $(this).attr('id');
+            const id = $(this.children[0]).attr('id');
             const text = $(this).text();
 
             for (let i = 0; i < levels.length; i++) {
